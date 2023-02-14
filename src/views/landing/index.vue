@@ -9,14 +9,12 @@
   <hero></hero>
   <lgs></lgs>
   <container></container>
-  <products></products>
 </template>
 <script setup>
 import { ref } from "vue";
 import hero from "./components/hero.vue";
 import feature from "./components/feature.vue";
 import container from "./components/container.vue";
-import products from "./components/products.vue";
 import orzImg from "@/components/orzImg.vue";
 import lgs from "./components/lgs.vue";
 </script>
