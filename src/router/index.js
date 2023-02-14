@@ -14,6 +14,11 @@ const router = createRouter({
           name: "home",
           component: home,
         },
+        {
+          path: "lgs",
+          name: "lgs",
+          component: () => import("@/views/lgs/index.vue"),
+        },
       ],
     },
     // {
