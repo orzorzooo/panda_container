@@ -12,7 +12,12 @@ import router from "./router";
 
 import "./assets/main.css";
 
+import { useRouter, useRoute } from "vue-router";
+
 const app = createApp(App);
+
+app.config.globalProperties.$route = useRoute();
+app.config.globalProperties.$router = useRouter();
 
 app.use(createPinia());
 app.use(router);
