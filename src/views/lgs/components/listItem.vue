@@ -18,7 +18,7 @@ const props = defineProps(["data"]);
 </script>
 <style scoped>
 .col {
-  padding: 0 1.5rem;
+  padding: 0 0.5rem;
   font-size: 1rem;
   line-height: 1.5rem;
 }

@@ -4,7 +4,13 @@
       <div class="font-bold text-xl">輕鋼構系列</div>
       <q-space></q-space>
       <div class="text-md text-gray-500">關於輕鋼構</div>
-      <q-btn rounded size="sm" color="primary">訂購</q-btn>
+      <q-btn
+        rounded
+        size="sm"
+        color="primary"
+        @click="$router.push({ name: 'lgsOrder' })"
+        >訂購</q-btn
+      >
     </q-toolbar>
     <q-separator />
   </div>
@@ -23,7 +29,9 @@
   </div>
   <div class="py-20 text-gray-500 w-2/3 mx-auto text-center leading-loose">
     <h1 class="text-6xl font-bold mb-10">打造自己的豪宅</h1>
-    <p class="text-3xl font-bold">依照屋主的需求及喜好，從空間格局到外牆風格，設計多樣化，不同於傳統工法受限制。</p>
+    <p class="text-3xl font-bold">
+      依照屋主的需求及喜好，從空間格局到外牆風格，設計多樣化，不同於傳統工法受限制。
+    </p>
   </div>
   <div>
     <products></products>
