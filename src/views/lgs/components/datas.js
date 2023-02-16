@@ -3,8 +3,10 @@ export default [
     name: "6坪",
     size: "6",
     description: "",
+    icon: "size6",
+    models: ["基礎型", "標準型"],
+    price: ["500,000", "600,000"],
     specs: [
-      { label: "款式", contents: [["基礎型"], ["標準型"]] },
       {
         label: "設備",
         contents: [
@@ -13,7 +15,7 @@ export default [
             "空調(品牌風管式空調)",
             "熱水器 (即熱式熱水器)",
             "浴霸(暖風式三合一集成浴霸)",
-            "投影儀",
+            "高畫質投影儀",
           ],
           [
             "冰箱",
@@ -69,9 +71,11 @@ export default [
   {
     name: "12坪",
     size: "12",
+    icon: "size12",
     description: "",
+    models: ["基礎型", "標準型", "豪華型"],
+    price: ["500,000", "600,000", "700,000"],
     specs: [
-      { label: "款式", contents: [["基礎型"], ["標準型"], ["豪華型"]] },
       {
         label: "設備",
         contents: [
@@ -144,8 +148,10 @@ export default [
     name: "24坪",
     size: "24",
     description: "",
+    icon: "size24",
+    models: ["基礎型", "標準型", "豪華型"],
+    price: ["500,000", "600,000", "700,000"],
     specs: [
-      { label: "款式", contents: [["基礎型"], ["標準型"], ["豪華型"]] },
       {
         label: "設備",
         contents: [

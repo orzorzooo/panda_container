@@ -24,6 +24,11 @@ const router = createRouter({
           name: "lgsOrder",
           component: () => import("@/views/lgs/order.vue"),
         },
+        {
+          path: "lgs/order/:size/:model",
+          name: "lgsOrderModel",
+          component: () => import("@/views/lgs/orderModel.vue"),
+        },
       ],
     },
     // {
