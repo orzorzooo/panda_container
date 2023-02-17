@@ -1,16 +1,22 @@
 <template>
   <div class="w-3/4 mx-auto mb-12">
-    <q-toolbar class="q-gutter-x-md">
-      <div class="font-bold text-xl">輕鋼構系列</div>
-      <q-space></q-space>
-      <div class="text-md text-gray-500" @click="$router.push({ name: 'lgs' })">
-        關於輕鋼構
-      </div>
-    </q-toolbar>
-    <q-separator />
+    <q-page-sticky position="top" expand>
+      <q-toolbar class="q-gutter-x-md w-3/4 bg-white border-b">
+        <div class="font-bold text-xl">輕鋼構系列</div>
+        <q-space></q-space>
+        <div
+          class="text-md text-gray-500"
+          @click="$router.push({ name: 'lgs' })"
+        >
+          關於輕鋼構
+        </div>
+        <q-separator />
+      </q-toolbar>
+    </q-page-sticky>
   </div>
-  <div class="w-3/4 mx-auto">
-    <div class="row">
+
+  <div class="w-3/4 mx-auto pt-12">
+    <div class="row overflow-y-auto h-screen">
       <div class="col-5 pr-6">
         <img :src="img($route.params.size)" alt="" />
       </div>
@@ -39,7 +45,7 @@
             </q-popup-proxy>
           </div>
         </div>
-        <div>
+        <div class="mb-12">
           <div class="font-bold">客製化項目</div>
           <div
             class="font-bold text-lg p-6 border border-2 border-gray-300 rounded-xl mb-3"
@@ -52,11 +58,17 @@
             沙發、床具
           </div>
         </div>
+        <div class="mb-12">
+          <div class="font-bold">填寫個人訊息</div>
+          <div
+            class="font-bold text-lg p-6 border border-2 border-gray-300 rounded-xl mb-3"
+          ></div>
+        </div>
       </div>
     </div>
   </div>
   <div
-    class="fixed bottom-0 left-0 right-0 h-32 border-t border-gray-300 bg-gray-100"
+    class="fixed-bottom left-0 right-0 h-32 border-t border-gray-300 bg-gray-100"
   >
     <div class="row w-3/4 mx-auto py-6">
       <q-space></q-space>
