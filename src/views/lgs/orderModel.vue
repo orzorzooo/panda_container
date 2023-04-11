@@ -60,6 +60,10 @@
         </div>
         <div class="mb-12">
           <div class="font-bold">填寫個人訊息</div>
+          <div class="q-gutter-md">
+            <q-input outlined v-model="reserveData.name" label="姓名" />
+            <q-input outlined v-model="reserveData.email" label="email" />
+          </div>
           <div
             class="font-bold text-lg p-6 border border-2 border-gray-300 rounded-xl mb-3"
           ></div>
@@ -77,15 +81,26 @@
         <div>預約後，我們將有專人與您聯繫</div>
       </div>
       <div>
-        <q-btn size="md" color="primary">立即預約</q-btn>
+        <q-btn size="md" color="primary" @click="reserve()">立即預約</q-btn>
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
+import { get, post } from "@/api/request";
 const img = (size) =>
   new URL(`/src/assets/images/lgs/size${size}.png`, import.meta.url);
 const now = new Date();
 const date = ref(now);
+const reserveData = ref({
+  email: "",
+  name: "",
+  message: "有預約單，請登入https://panda.api.orzorzooo.com 進行查看",
+});
+
+async function reserve() {
+  const data = await post({ collection: "reserve", data: reserveData.value });
+  console.log(data);
+}
 </script>
